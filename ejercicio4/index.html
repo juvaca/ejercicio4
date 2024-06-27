@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Gustos Musicales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Encuesta de Gustos Musicales</h1>
+    </header>
+    <main>
+        <div id="contenido">
+            <div id="menu">
+                <button onclick="mostrarFormularioAgregar()">Agregar Persona</button>
+                <button onclick="mostrarFormularioMostrar()">Mostrar Persona</button>
+            </div>
+            <div id="formulario-agregar" style="display: none;">
+                <h2>Agregar Persona</h2>
+                <form id="form-agregar">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+                    <label for="cedula">Cédula:</label>
+                    <input type="text" id="cedula" name="cedula" required><br>
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required><br>
+                    <label for="ciudadResidencia">Ciudad de Residencia:</label>
+                    <input type="text" id="ciudadResidencia" name="ciudadResidencia" required><br>
+                    <label for="ciudadOrigen">Ciudad de Origen:</label>
+                    <input type="text" id="ciudadOrigen" name="ciudadOrigen" required><br>
+                    <label for="cancion1">Canción Favorita 1:</label>
+                    <input type="text" id="cancion1" name="cancion1"><br>
+                    <label for="cancion2">Canción Favorita 2:</label>
+                    <input type="text" id="cancion2" name="cancion2"><br>
+                    <label for="cancion3">Canción Favorita 3:</label>
+                    <input type="text" id="cancion3" name="cancion3"><br>
+                    <button type="button" onclick="agregarPersona()">Agregar</button>
+                </form>
+            </div>
+            <div id="formulario-mostrar" style="display: none;">
+                <h2>Mostrar Persona</h2>
+                <form id="form-mostrar">
+                    <label for="posicion">Posición en el Vector(posiciones van desde 0 hasta 5):</label>
+                    <input type="number" id="posicion" name="posicion" required><br>
+                    <button type="button" onclick="mostrarPersona()">Mostrar</button>
+                </form>
+                <div id="resultado"></div>
+            </div>
+        </div>
+    </main>
+    <script src="emisora.js"></script>
+</body>
+</html>
